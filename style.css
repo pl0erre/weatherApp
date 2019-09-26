@@ -26,7 +26,8 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  height: 50%;
+  height: 60%;
+  margin: 5px;
   }
 
   .location {
@@ -39,12 +40,15 @@ body {
   .weather {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
   }
 
   .temp {
+    min-width: 150px;
+    text-align: center;
     font-weight: 200;
     font-size: 3rem;
   }
@@ -54,8 +58,10 @@ body {
   }
 
   .wind {
-      font-weight: 200;
-      font-size: 1.4rem;
+    min-width: 150px;
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.4rem;
   }
 
   .summary {
@@ -63,6 +69,12 @@ body {
     font-size: 1.2rem;
     width: 100%;
     text-align: center;
+  }
+
+  @media(max-width: 400px) {
+    .temp-value {
+      font-size: 2.8rem;
+    }
   }
 
   
