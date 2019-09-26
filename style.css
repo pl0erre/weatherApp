@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0,138,134,1) 0%, rgba(123,159,244,1) 100%);
+  overflow-y: hidden;
+}
+  
+.container {
+  border: 1px solid black;
+  min-width: 350px;
+  width: 800px;
+  
+
+  }
