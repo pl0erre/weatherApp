@@ -27,6 +27,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   height: 60%;
+  min-height: 300px;
   margin: 5px;
   }
 
