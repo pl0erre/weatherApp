@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300i,400,400i,700|Nova+Mono&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  color: white;
+  font-family: "Lato"
 }
 
 body {
@@ -15,9 +19,50 @@ body {
 }
   
 .container {
-  border: 1px solid black;
-  min-width: 350px;
-  width: 800px;
-  
-
+  background-color: rgba(199, 199, 199, 0.15);
+  border: 5px solid rgb(199, 199, 199);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 50%;
   }
+
+  .location {
+    font-family: "Nova mono";
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .weather {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .temp {
+    font-weight: 200;
+    font-size: 3rem;
+  }
+
+  .temp-value {
+    font-size: 4rem;
+  }
+
+  .wind {
+      font-weight: 200;
+      font-size: 1.4rem;
+  }
+
+  .summary {
+    font-weight: 200;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  

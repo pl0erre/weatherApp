@@ -16,12 +16,27 @@ window.addEventListener("load",() => {
         return res.json()
       })
       .then(data => {
-        console.log(data);
-        const {temperature} = data.currently;
 
+        const {temperature, icon, windSpeed} = data.currently;
+        const {summary} = data.hourly;
+        const timezone = data.timezone.split("/");
+
+
+        document.getElementsByClassName("temp-value")[0].innerHTML = Math.floor(((temperature -32) * 5/9));
+        document.getElementsByClassName("summary")[0].innerHTML = summary;
+        document.getElementsByClassName("location")[0].innerHTML = timezone[1];
+        document.getElementsByClassName("wind-value")[0].innerHTML = Math.floor(windSpeed);
+
+        setIcons(icon, document.getElementsByClassName("icon")[0]);
       });
     });
-
+  
+  function setIcons(icon, iconID) {
+    const skycons = new Skycons({color: "white"});
+    const currentIcon = icon.replace(/-/g, "_").toUpperCase();
+    skycons.play();
+    return skycons.set(iconID, Skycons[currentIcon]);
+  }
   } else {
     alert("Please Allow location")
   }
